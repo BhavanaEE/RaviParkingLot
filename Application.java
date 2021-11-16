@@ -37,19 +37,49 @@ public class Application{
                 System.out.print("display free_count ");
                 sc.nextLine();
                 vehicle_type=sc.nextLine();
-                pt.displayFreeCount(vehicle_type,v);
+                switch(vehicle_type){
+                    case "CAR":
+                    pt.displayFreeCount(vehicle_type, v, 3, slotsInEachFloor);
+                    break;
+                    case "BIKE":
+                    pt.displayFreeCount(vehicle_type, v, 1, 3);
+                    break;
+                    case "TRUCK":
+                    pt.displayFreeCount(vehicle_type, v, 0, 1);
+                    break;
+                }
                 break;
                 case 4:
                 System.out.print("display free_slots ");
                 sc.nextLine();
                 vehicle_type=sc.next();
-                pt.displayFreeSlots(vehicle_type,v);
+                switch(vehicle_type){
+                    case "CAR":
+                    pt.displayFreeSlots(vehicle_type, v, 3, slotsInEachFloor);
+                    break;
+                    case "BIKE":
+                    pt.displayFreeSlots(vehicle_type, v, 1, 3);
+                    break;
+                    case "TRUCK":
+                    pt.displayFreeSlots(vehicle_type, v, 0, 1);
+                    break;
+                }
                 break;
                 case 5:
                 System.out.print("display occupied_slots ");
                 sc.nextLine();
                 vehicle_type=sc.nextLine();
-                pt.displayOccupiedSlots(vehicle_type,v);
+                switch(vehicle_type){
+                    case "CAR":
+                    pt.displayOccupiedSlots(vehicle_type, v, 3, slotsInEachFloor);
+                    break;
+                    case "BIKE":
+                    pt.displayOccupiedSlots(vehicle_type, v, 1, 3);
+                    break;
+                    case "TRUCK":
+                    pt.displayOccupiedSlots(vehicle_type, v, 0, 1);
+                    break;
+                }
                 break;
                 case 6:
                 sc.close();
